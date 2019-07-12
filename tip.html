@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="refresh" content="3;url=index_user.jsp" /> 
+    <meta charset="UTF-8">
+    <style type="text/css">
+     .order-style{
+        position:absolute;
+        margin:-150px 0 0 -200px;
+        background-color: #F0F0F0;
+        border:1px solid #E0E0E0;
+        overflow: auto;
+        height: 300px;
+        width: 400px;
+        top:50%;
+        left:50%;
+        
+    } 
+    .text-center{
+        text-align: center;
+        line-height:200px;  
+    }
+     .text-color {
+            color: red;
+            text-align: center;
+     } 
+    }
+    </style>
+    <title>跳转</title>
+</head>
+<body>
+    <div class="order-style">
+    <span class="text-center"><h3>预定成功，三秒后跳转回主页！</h3></span>
+    <div id="time" class="text-color"></div>
+    </div>
+</body>
+<script type="text/javascript">
+        window.onload = function(){
+            var i = 3;
+            var timer = setInterval(function(){
+                if(i== -1){
+                    clearInterval(timer);
+                }else{
+                    document.getElementById("time").innerHTML = i;
+                    --i;
+                }
+            },1000);
+ 
+        }
+</script>
+</html>
+ 
+
+ 
